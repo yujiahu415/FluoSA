@@ -80,7 +80,7 @@ class Detector():
 		cfg.DATASETS.TEST=()
 		cfg.DATALOADER.NUM_WORKERS=4
 		cfg.MODEL.WEIGHTS=model_zoo.get_checkpoint_url("COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml")
-		cfg.MODEL.ROI_HEADS.BATCH_SIZE_PER_IMAGE=128
+		cfg.MODEL.ROI_HEADS.BATCH_SIZE_PER_IMAGE=256
 		cfg.MODEL.ROI_HEADS.NUM_CLASSES=int(len(classnames))
 		cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST=0.5
 		cfg.SOLVER.MAX_ITER=int(iteration_num)
