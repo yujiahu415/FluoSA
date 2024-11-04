@@ -995,7 +995,7 @@ def main_window():
 
 	the_absolute_current_path=str(Path(__file__).resolve().parent)
 	app=wx.App()
-	InitialWindow(f"FluoSA v{__version__}")
+	InitialWindow(f'FluoSA v{__version__}')
 	print('The user interface initialized!')
 	app.MainLoop()
 
