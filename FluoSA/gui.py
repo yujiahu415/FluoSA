@@ -971,10 +971,10 @@ class WindowLv2_AnalyzeCalcium(wx.Frame):
 				for neuro_name in self.neuro_kinds:
 					individual_summary=os.path.join(individual_path,neuro_name+'_summary.xlsx')
 					individual_F=os.path.join(individual_path,neuro_name+'_F.xlsx')
-					if os.path.exists(individual_summary) is True:
+					if os.path.exists(individual_summary):
 						all_summary.append(pd.read_excel(individual_summary))
 						names_summary.append(basename)
-					if os.path.exists(individual_F) is True:
+					if os.path.exists(individual_F):
 						all_F.append(pd.read_excel(individual_F))
 						names_F.append(basename)
 
