@@ -942,12 +942,12 @@ class WindowLv2_AnalyzeCalcium(wx.Frame):
 			for i in self.path_to_lifs:
 
 				filename=os.path.splitext(os.path.basename(i))[0].split('_')
-				if self.decode_neuronumber is True:
+				if self.decode_neuronumber:
 					self.neuro_number={}
 					number=[x[1:] for x in filename if len(x)>1 and x[0]=='n']
 					for a,neuro_name in enumerate(self.neuro_kinds):
 						self.neuro_number[neuro_name]=int(number[a])
-				if self.decode_t is True:
+				if self.decode_t:
 					for x in filename:
 						if len(x)>1:
 							if x[0]=='b':
